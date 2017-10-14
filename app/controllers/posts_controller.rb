@@ -7,6 +7,8 @@ class PostsController < ApplicationController
 
 
 
+
+
  def new
 
  end
@@ -14,11 +16,11 @@ class PostsController < ApplicationController
   def create
   @post = Post.new(post_params)
   @post.save
-  redirect_to @post
+  render 'show'
   end
 
   private
   def post_params
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :body)
   end
 end

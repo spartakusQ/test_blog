@@ -1,5 +1,7 @@
 <h1>New Post</h1>
-<%= form_with scope: :post, url: posts_path, local: true do |form| %>
+<%= form_with scope: :post, url: posts_path, Method: :post, local: true do |form| %>
+
+
 
   <p>
     <%= form.label :title %><br>
@@ -8,7 +10,7 @@
 
   <p>
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.text_area :body %>
   </p>
 
   <p>
