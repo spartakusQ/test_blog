@@ -4,10 +4,10 @@ one:
   title: MyString
   body: MyText
   author: one
-  published_at: 2017-10-13 16:29:36
+  published_at: 2017-10-15 19:55:00
 
 two:
   title: MyString
   body: MyText
   author: two
-  published_at: 2017-10-13 16:29:36
+  published_at: 2017-10-15 19:55:00
