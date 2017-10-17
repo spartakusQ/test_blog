@@ -1,7 +1,15 @@
 <h1>Listing Post</h1>
-
+<tr>
+  <% if user_signed_in? %>
+    <span>Здравствуйте, <%= current_user.email %></span>
+    <%= link_to 'Выйти', destroy_user_session_path %>
+  <% else %>
+    <%= link_to 'Войти', new_user_session_path %> либо <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+  <% end %>
+</tr> <br>
 <%= link_to 'New post', new_post_path %>
 <table>
+
   <tr>
     <th>Title</th>
     <th>Text</th>
@@ -10,6 +18,7 @@
 
   <% @posts.each do |post| %>
     <tr>
+
       <td><%= post.title %></td>
       <td><%= post.body %></td>
       <td><%= link_to 'Show', post_path(post) %></td>
