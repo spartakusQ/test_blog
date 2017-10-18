@@ -13,6 +13,7 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th>User</th>
     <th colspan="2"></th>
   </tr>
 
@@ -21,6 +22,7 @@
 
       <td><%= post.title %></td>
       <td><%= post.body %></td>
+      <td><%= post.user.email %></td>
       <td><%= link_to 'Show', post_path(post) %></td>
       <td><%= link_to 'Edit', edit_post_path(post) %></td>
       <td><%= link_to 'Delete', post_path(post),
