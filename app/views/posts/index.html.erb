@@ -1,7 +1,7 @@
 <h1>Listing Post</h1>
 <tr>
   <% if user_signed_in? %>
-    <span>Здравствуйте, <%= current_user.email %></span><br>    
+    <span>Здравствуйте, <%= current_user.email %></span><br>
   <% else %>
     <%= link_to 'Sign In', new_user_session_path %>
   <% end %>
@@ -21,10 +21,10 @@
 
       <td><%= post.title %></td>
       <td><%= post.body %></td>
-      <td><%= post.user.email %></td>
+      <td><%= post.user_id %></td>
       <td><%= link_to 'Show', post_path(post) %></td>
 
-      <% if post.user == current_user %>
+      <% if post.user_id == current_user %>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
