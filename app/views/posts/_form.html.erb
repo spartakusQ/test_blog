@@ -19,6 +19,13 @@
     <%= form.text_field :title %>
   </p>
 
+
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.label :author, value: current_user.id %><br>
+  </p>
+
   <p>
     <%= form.label :text %><br>
     <%= form.text_area :body %>
